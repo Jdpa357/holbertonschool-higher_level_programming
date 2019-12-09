@@ -66,8 +66,11 @@ Namespaces are one honking great idea -- let's do more of those!
 ### [9 - Eadter Egg](./9-easter_egg.py)
 * Write a Python script that prints The Zen of Python, by TimPeters, followed by a new line.
 
-### [10 - Linked list cycle](./10-check_cycle.c)(./lists.h)
+### [10 - Linked list cycle](./10-check_cycle.c)
 * Write a function in C that checks if a singly linked list has a cycle in it.
+
+### [Header file](./lists.h)
+* A header file containing all prototypes used in this project.
 
 ## Author
 * **Juan Portilla** - [jdpa352](https://github.com/Jdpa357)
