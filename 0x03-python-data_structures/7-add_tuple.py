@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    length_a = len(tuple_a)
-    length_b = len(tuple_b)
-    if length_a or length_b < 2:
+    if len(tuple_a) or len(tuple_b) < 2:
         for i in range(2):
             tuple_a = tuple_a + (0,)
             tuple_b = tuple_b + (0,)
