@@ -6,10 +6,8 @@ adds two integers
 
 
 def add_integer(a, b=98):
-    """This function returns the result
-    of an addition between two integers
-    or error if the parameters are not
-    integers or float
+    """This function returns the result of an addition between two
+    integers or error if the parameters are not integers or float
     """
 
     if not isinstance(a, (int, float)):

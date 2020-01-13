@@ -1,0 +1,39 @@
+==========================
+The ```3-say_my_name.py```
+==========================
+
+Using ``say_my_name``
+---------------------
+
+Import the function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing:
+    >>> first_name = 'Juan David'
+    >>> last_name = 'Portilla Alzate'
+    >>> say_my_name(first_name, last_name)
+    My name is Juan David Portilla Alzate
+
+Test with only one argument:
+    >>> say_my_name("Duvan")
+    My name is Duvan
+
+Test if parameter is not a string:
+    >>> say_my_name(20)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Test if one of the parameters is not a string:
+    >>> say_my_name("Camilo", 10)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(5, "Gomez Cantillo")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Test if the arguments of the function are missing:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: missing 1 of 2 required arguments on the function say_my_name(first_name, last_name)
