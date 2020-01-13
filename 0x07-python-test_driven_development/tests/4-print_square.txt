@@ -1,0 +1,44 @@
+===========================
+The ```4-print_square.py```
+===========================
+
+Using ``print_square``
+----------------------
+
+Import the function:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Testing:
+    >>> size = 4
+    >>> print_square(size)
+    ####
+    ####
+    ####
+    ####
+
+Test if parameter is an integer:
+    >>> print_square('cuadrado')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Test for floating numbers:
+    >>> print_square(8.5)
+    ########
+    ########
+    ########
+    ########
+    ########
+    ########
+    ########
+    ########
+
+Test for negative numbers:
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Test for no arguments passed:
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: missing 1 required argument on the function print_square(size)
