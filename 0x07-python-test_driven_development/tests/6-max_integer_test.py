@@ -21,5 +21,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_empty(self):
         self.assertEqual(max_integer(), None)
 
-    def text_max_instance(self):    
+    def test_max_instance(self):    
         self.assertNotIsInstance(max_integer([5, 9.2]), int)
+
+    def test_raising(self):
+        matrix = [1, 9, 6]
+        self.assertEqual(max_integer(matrix), 9)
+        with self.assertRaises(TypeError):
+            max_integer(['zaco', 'guest', 9])
