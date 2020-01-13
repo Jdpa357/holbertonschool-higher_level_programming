@@ -25,7 +25,7 @@ Test division by string:
     TypeError: div must be a number
 
 Test matrix is not list:
-    >>> matrix_divided([1, 7)
+    >>> matrix_divided(1, 7)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
@@ -40,7 +40,7 @@ Test values in the matrix are not integers:
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test the length of the matrix:
-    >>> matrix_divided([[1, 7, 20], [2, 6], 6)
+    >>> matrix_divided([[1, 7, 20], [2, 6]], 6)
     Traceback (most recent call last):
     TypeError: Each row of the matrix must have the same size
 
@@ -53,8 +53,8 @@ Test original matrix is not affected, returned a new matrix:
 Test number of arguments passed to the function:
     >>> matrix_divided(matrix)
     Traceback (most recent call last):
-    TypeError: missing 1 required argument on the function matrix_divided(object, div)
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
     >>> matrix_divided()
     Traceback (most recent call last):
-    TypeError: missing 2 required arguments on the function matrix_divided(object, div)
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

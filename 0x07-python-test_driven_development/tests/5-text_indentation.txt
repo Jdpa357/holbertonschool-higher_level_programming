@@ -12,27 +12,32 @@ Import the function:
 Testing:
     >>> text_indentation("Lorem ipsum: dolor sit amet, consectetur adipiscing elit. yes!")
     Lorem ipsum:
-    <BLANK_LINE>
+    <BLANKLINE>
     dolor sit amet,
-    <BLANK_LINE>
-    consectetur adipiscing elit?
-    <BLANK_LINE>
+    <BLANKLINE>
+    consectetur adipiscing elit.
+    <BLANKLINE>
     yes!
 
-Test if parameter is not a string:
+Test if two parameters are passed into it:
     >>> text_indentation(15, 7)
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test if parameter is not an integer:
+    >>> text_indentation(15)
     Traceback (most recent call last):
     TypeError: text must be a string
 
 Test behavior with leading/trailing spaces:
     >>> text_indentation("Hello:       world")
     Hello:
-    <BLANK_LINE>
+    <BLANKLINE>
     world
 
     >>> text_indentation("      The world is mine.")
     The world is mine.
-    <BLANK_LINE>
+    <BLANKLINE>
 
     >>> text_indentation("UFOS are real!         ")
     UFOS are real!
@@ -40,4 +45,4 @@ Test behavior with leading/trailing spaces:
 Test for no parameter passed:
     >>> text_indentation()
     Traceback (most recent call last):
-    TypeError: missing 1 required argument on the function text_indentation(text)
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

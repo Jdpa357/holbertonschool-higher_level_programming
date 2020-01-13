@@ -24,14 +24,8 @@ Test if parameter is an integer:
 
 Test for floating numbers:
     >>> print_square(8.5)
-    ########
-    ########
-    ########
-    ########
-    ########
-    ########
-    ########
-    ########
+    Traceback (most recent call last):
+    TypeError: size must be an integer
 
 Test for negative numbers:
     >>> print_square(-2)
@@ -41,4 +35,4 @@ Test for negative numbers:
 Test for no arguments passed:
     >>> print_square()
     Traceback (most recent call last):
-    TypeError: missing 1 required argument on the function print_square(size)
+    TypeError: print_square() missing 1 required positional argument: 'size'
