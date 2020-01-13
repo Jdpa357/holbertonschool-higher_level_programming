@@ -1,0 +1,43 @@
+===============================
+The ```5-text_indentation.py```
+===============================
+
+Using  ``text_indentation``
+---------------------------
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing:
+    >>> text_indentation("Lorem ipsum: dolor sit amet, consectetur adipiscing elit. yes!")
+    Lorem ipsum:
+    <BLANK_LINE>
+    dolor sit amet,
+    <BLANK_LINE>
+    consectetur adipiscing elit?
+    <BLANK_LINE>
+    yes!
+
+Test if parameter is not a string:
+    >>> text_indentation(15, 7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Test behavior with leading/trailing spaces:
+    >>> text_indentation("Hello:       world")
+    Hello:
+    <BLANK_LINE>
+    world
+
+    >>> text_indentation("      The world is mine.")
+    The world is mine.
+    <BLANK_LINE>
+
+    >>> text_indentation("UFOS are real!         ")
+    UFOS are real!
+
+Test for no parameter passed:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: missing 1 required argument on the function text_indentation(text)
