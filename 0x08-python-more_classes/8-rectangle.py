@@ -68,7 +68,7 @@ class Rectangle():
     def __del__(self):
         """Deletes the instance of Rectangle class"""
         print('Bye rectangle...')
-        Rectangle.number_of_instances -=1
+        Rectangle.number_of_instances -= 1
         del self
 
     @staticmethod
