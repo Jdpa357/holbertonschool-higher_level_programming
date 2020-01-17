@@ -22,7 +22,7 @@ Learning Objectives:
 ### [2. key -> index](./2-key_index.c)
 * A function that gives you the index of a key.
 
-### [3. >>> ht['betty'] = 'holberton'] ](./3-hash_table_set.c)
+### [3. >>> ht['betty'] = 'holberton'](./3-hash_table_set.c)
 * A function that adds an element to the hash table.
 
 ### [4. >>> ht['betty']](./4-hash_table_get.c)
