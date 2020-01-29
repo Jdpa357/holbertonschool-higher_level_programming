@@ -4,7 +4,8 @@
 Class Base Module
 """
 import json
-
+import os
+import csv
 
 class Base():
     """Base Class"""
@@ -47,9 +48,9 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
-        new = cls(42, 42, 42)
-        new.update(**dictionary)
-        return new
+        aux = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
+        aux.update(**dictionary)
+        return aux
 
     @classmethod
     def load_from_file(cls):
