@@ -9,4 +9,4 @@ class BaseGeometry():
     """A Class that represent a geometry form"""
     def area(self):
         """Returns the area of the Rectangle"""
-        raise Exception("area() is not implementhed")
+        raise Exception("area() is not implemented")
