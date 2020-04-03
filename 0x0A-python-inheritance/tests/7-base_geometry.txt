@@ -1,5 +1,4 @@
-=============================
-The ``7-base_geometry`` module
+se_geometry`` module
 =============================
 
 Using ``BaseGeometry``
