@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let myNumberArray = [];
+const myNumberArray = [];
 if (process.argv.length < 4) {
   console.log('0');
 } else {
