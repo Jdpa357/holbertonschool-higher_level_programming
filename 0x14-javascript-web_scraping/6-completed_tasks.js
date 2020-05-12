@@ -1,21 +1,21 @@
 #!/usr/bin/node
+
 const request = require('request');
-let url = process.argv[2];
-let todoDict = {};
-request(url, function (error, response, body) {
-  if (error) {
-    console.log(error);
+
+request(process.argv[2], (err, res, body) => {
+  if (err) {
+    console.log(err);
   } else {
-    let info = JSON.parse(body);
-    info.forEach(function (element) {
-      if (element.completed) {
-        if (element.userId in todoDict) {
-          todoDict[element.userId] += 1;
+    const list = JSON.parse(body);
+    console.log(list.reduce((ret, el) => {
+      if (el.completed) {
+        if (ret[el.userId]) {
+          ret[el.userId]++;
         } else {
-          todoDict[element.userId] = 1;
+          ret[el.userId] = 1;
         }
       }
-    });
+      return ret;
+    }, {}));
   }
-  console.log(todoDict);
 });
