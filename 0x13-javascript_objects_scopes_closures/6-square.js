@@ -9,4 +9,4 @@ module.exports = class Square extends require('./5-square') {
       console.log(char.repeat(this.width));
     }
   }
-};#!/usr/bin/node
+};
