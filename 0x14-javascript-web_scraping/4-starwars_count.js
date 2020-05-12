@@ -2,16 +2,14 @@
 
 const request = require('request');
 
-request(`${process.argv[2]}`, (error, response, body) => {
-  if (error) {
-    console.log(error);
+request(`${process.argv[2]}`, (err, res, body) => {
+  if (err) {
+    console.log(err);
   } else {
-    let info = JSON.parse(body).results;
-    let count = 0; info.forEach(function (element) {
-      element.characters.forEach(function (character) {
-        if (character.includes('18')) { count++; }
-      });
-    });
-    console.log(count);
+    const films = JSON.parse(body).results;
+    console.log(films.reduce((c, e) => {
+      e.characters.forEach(el => el.includes('18') ? c++ : c);
+      return c;
+    }, 0));
   }
 });
