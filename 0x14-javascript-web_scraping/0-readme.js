@@ -1,6 +1,5 @@
 #!/usr/bin/node
-// This module defines a script that reads and prints the content of a file
-let fs = require('fs');
+const fs = require('fs');
 
 fs.readFile(process.argv[2], 'utf-8', (err, data) => {
   if (err) {
